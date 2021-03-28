@@ -1,37 +1,33 @@
 ﻿using System;
 
-namespace ConsoleApp3_hw_jaaa
+namespace ConsoleApp3_สอบจ่ะสอบ_1
 {
     class Program
     {
         static void Main(string[] args)
         {
+            int a, b;
+            Console.Write("input number:");
+            a = int.Parse(Console.ReadLine());
+            Console.Write("input number:");
+            b = int.Parse(Console.ReadLine());
 
-            string mode = Console.ReadLine();
-            double  xt = double .Parse(Console.ReadLine());
-            double  yp = double .Parse(Console.ReadLine());
-            if (mode =="time" || mode == "price")
+            int x = a;
+            int y = b;
+
+            while (x != y)
             {
-                if (xt < 0)
+                if (x < y)
                 {
-                    Console.Write("invalid mouse position");
+                    x = x + a;
                 }
-                else if (mode == "time")
+                else
                 {
-                    yp = Math.Pow((xt - 1), 2);
-                    Console.Write("{0},{1}",xt, yp);
+                    y = y + b;
                 }
-                else if (mode == "price")
-                {
-                    xt = Math.Sqrt(yp) + 1;
-                    Console.Write("{0},{1}", xt, yp);
-                }
-                    
             }
-            else
-            {
-                Console.Write("invalid mode");
-            }
+            Console.WriteLine(x);
+
             Console.ReadLine();
         }
     }
