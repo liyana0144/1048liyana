@@ -1,21 +1,36 @@
 ﻿using System;
 
 namespace ConsoleApp3_มิดเทอมม
+namespace ConsoleApp5_fi_2
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int day, time;
-            string order;
-            Console.Write("input day that you want to order menu in 1-7(1 is for monday and 7 is for sunday): ");
-            day = int.Parse(Console.ReadLine());
-            Console.Write("input time that you want to order menu in 8-18 (8 is mean 8:00 o'clock and 18 is mean 18:00 o'clock): ");
-            time = int.Parse(Console.ReadLine());
-            Console.WriteLine("we have breakfast set 5 sets per day,weekend set and 2 sets per day and coffee 3 sets per day");
-            Console.WriteLine("please enter youe menu : ");
-            order = Console.ReadLine();
-            
+            string n;
+            Console.WriteLine("input number that you want to find and enter END to finish");
+            do
+            {
+                n = Console.ReadLine();
+            } while (n != "END");
+            Console.WriteLine("  ");
+
+            string find;
+            Console.WriteLine("input the thing that you want to solve");
+            find = Console.ReadLine();
+            if (find == "FindMax")
+            {
+                Console.WriteLine("Max value is = " + Math.Max(n));
+            }
+            else if(find == "FindMin")
+            {
+                Console.WriteLine("Min value is = " + Math.Min(n));
+
+            }
+            else
+            {
+                Console.WriteLine("invalid");
+            }
         }
     }
 }
